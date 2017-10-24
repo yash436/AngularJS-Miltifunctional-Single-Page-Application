@@ -1,0 +1,17 @@
+/* Stylesheet for own styles */
+
+.add-delete {
+	cursor: pointer;
+}
+
+.strike {
+	text-decoration: line-through;
+}
+
+.condition {
+	text-transform: capitalize;
+}
+
+.img-full {
+	width: 100%;
+}

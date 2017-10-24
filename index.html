@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<title>Angular App</title>
+
+	<!-- Required Meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Styling -->
+	<link rel="stylesheet" type="text/css" href="./scripts/bootstrap.min.css" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./scripts/style.css">
+</head>
+<body ng-controller="appController">
+
+	<header class="header clearfix">
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+			<a class="navbar-brand" href="#!/">My Angular App</a>
+
+			<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item" ng-class="{ active: isActive('/')}">
+						<a class="nav-link" href="#!/">Home</a>
+					</li>
+					<li class="nav-item" ng-class="{ active: isActive('/shoppinglist')}">
+						<a class="nav-link" href="#!/shoppinglist">Shopping List</a>
+					</li>
+					<li class="nav-item" ng-class="{ active: isActive('/weather')}">
+						<a class="nav-link" href="#!/weather">Weather</a>
+					</li>
+					<li class="nav-item" ng-class="{ active: isActive('/movies-explorer')}">
+						<a class="nav-link" href="#!/movies-explorer">Explore Movies</a>
+					</li>
+					<!-- <li class="nav-item">
+						<a class="nav-link disabled" href="#!/">Disabled</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+						<div class="dropdown-menu" aria-labelledby="dropdown01">
+							<a class="dropdown-item" href="#!/shoppinglist">Shopping List</a>
+							<a class="dropdown-item" href="#!/weather">Weather</a>
+							<a class="dropdown-item" href="#!/movies-explorer">Explore Movies</a>
+						</div>
+					</li> -->
+				</ul>
+				<!-- <form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" placeholder="Search" aria-label="Search" type="text">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				</form> -->
+			</div>
+		</nav>
+	</header>
+
+	<!-- <div ng-view></div> -->
+
+	<div class="container-fluid">
+		<main class="container" role="main">
+
+			<p></p>
+
+			<!-- <h1>Hello World!</h1>
+			<p>Views will show here</p> -->
+
+				<div ng-view></div>
+
+		</main>
+
+		<hr />
+
+		<footer class="footer">
+			<div class="container-fluid">
+				<p>Created by Yash Shah</p>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Javascript -->
+
+	<!-- Bootstrap -->
+	<script src="./scripts/jquery-3.2.1.slim.min.js"></script>
+	<script src="./scripts/popper.min.js"></script>
+	<script src="./scripts/bootstrap.min.js"></script>
+
+	<!-- Angular -->
+	<script src="./scripts/angular.min.js"></script>
+	<script src="./scripts/angular-route.min.js"></script>
+
+	<!-- App related files -->
+	<script src="./app/app.js"></script>
+	<script src="./app/controllers/appController.js"></script>
+	<script src="./app/controllers/homeController.js"></script>
+	<script src="./app/controllers/shoppinglistController.js"></script>
+	<script src="./app/controllers/weatherController.js"></script>
+	<script src="./app/controllers/moviesExplorerController.js"></script>
+	<script src="./app/controllers/connectDbController.js"></script>
+
+</body>
+</html>

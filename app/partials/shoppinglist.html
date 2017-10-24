@@ -1,0 +1,28 @@
+<div>
+
+	<h2>{{ page }}</h2>
+
+	<hr />
+
+	<p>Add, remove and mark items in your shopping list</p>
+
+	<ul class="list-group">
+		<li class="list-group-item d-flex justify-content-between align-items-center" ng-repeat="product in products">
+			<!-- <span class="add-delete" ng-click="deleteItem($index)">&#x2714;</span> -->
+			<input type="checkbox" ng-model="product.checked" />
+			<span class="item-text" ng-class="{strike: product.checked}">{{ product.name }}</span>
+			<span class="add-delete" ng-click="deleteItem($index)">&#x274C;</span>
+		</li>
+	</ul>
+
+	<p></p>
+
+	<form>
+		<div class="form-group">
+			<input type="text" class="form-control" ng-model="item" />
+		</div>
+		<button class="btn btn-primary" ng-click="addItem()">Add item</button>
+		<p>{{ errorText }}</p>
+	</form>
+
+</div>

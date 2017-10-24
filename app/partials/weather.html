@@ -1,0 +1,32 @@
+<div>
+	
+	<h2>{{ page }}</h2>
+
+	<hr />
+
+	<p>Display current weather conditions for any city</p>
+
+	<form>
+		<div class="form-group">
+			<input type="text" class="form-control" ng-model="city" placeholder="Type name of city" />
+		</div>
+		<button id="searchCityBtn" class="btn btn-primary" ng-click="searchCity()">Search</button>
+	</form>
+
+	<p></p>
+
+	<div class="list-group">
+		<div class="list-group-item list-group-item-action flex-column align-items-start" ng-repeat="c in cities">
+			<h4 class="mb-1">{{ c.city }}, {{ c.country }}</h4>
+			<p class="condition mb-1"><img src="{{c.conditionImg}}" />{{c.condition}}</p>
+			<h5 class="mb-1">Current: {{ c.currentC }}&#176;C ({{ c.currentF }}&#176;F)</h5>
+			<p class="mb-1">High/low: {{ c.maxC }} / {{ c.minC }} ({{ c.maxF }} / {{ c.minF }})</p>
+			<p class="mb-1">Wind: {{ c.windKmph }}kmph / {{ c.windMph }}mph</p>
+			<p class="mb-1">Humidity: {{ c.humidity }}%</p>
+			<p class="mb-1">Clouds: {{ c.clouds }}%</p>
+			<p class="mb-1">Sunrise: {{ c.sunrise }} Sunset: {{ c.sunset }}</p>
+			<small class="text-muted">Last updated: {{ c.timestamp }}</small>
+		</div>
+	</div>
+
+</div>
